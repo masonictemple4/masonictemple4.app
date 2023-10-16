@@ -50,7 +50,8 @@ When you have automigrations to make to the database models.
 `$ masonictemple4.app migrate`
 
 #### Runserver:
-To run the server
+Start the REST service.
+
 `$ masonictemple4.app runserver` 
 
 You can specify a port with the `-p` flag (default: 8080).
