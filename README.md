@@ -45,7 +45,8 @@ A really interesting introduction to my blog
 Where the `-i` flag represents the blog id.
 
 #### Make migrations:  
-When you have automigrations to make to the database models.
+When you have automigrations to make to the database models. 
+
 `$ masonictemple4.app migrate`
 
 #### Runserver:
