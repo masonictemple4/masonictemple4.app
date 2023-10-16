@@ -19,10 +19,8 @@ func New(config *gorm.Config) (*gorm.DB, error) {
 	// Treat "" and "false" as false
 	// Treat everything else as true.
 	useConn := os.Getenv("USE_CLOUD_SQL_CONNECTOR")
-	fmt.Printf("The use connection: %s\n", useConn)
 
 	if useConn == "" || useConn == "false" {
-		println("we're not supposed to be executing this version")
 		dsn := fmt.Sprintf(
 			"host=%s user=%s password=%s dbname=%s port=%s sslmode=%s",
 			os.Getenv("DB_HOST"),
@@ -38,7 +36,6 @@ func New(config *gorm.Config) (*gorm.DB, error) {
 		}
 	} else {
 		instanceConnectionName := os.Getenv("DB_CONNECTION_NAME")
-		fmt.Printf("okay we made it to instanceConnectionName: %s\n", instanceConnectionName)
 		dsn := fmt.Sprintf(
 			"host=%s user=%s password=%s dbname=%s sslmode=%s sslrootcert=%s sslcert=%s, sslkey=%s",
 			instanceConnectionName,
@@ -51,7 +48,6 @@ func New(config *gorm.Config) (*gorm.DB, error) {
 			os.Getenv("SSL_KEY"),
 		)
 
-		fmt.Printf("okay we made it to dsn: %s\n", dsn)
 		db, err = gorm.Open(postgres.New(postgres.Config{
 			DriverName: "cloudsqlpostgres",
 			DSN:        dsn,
