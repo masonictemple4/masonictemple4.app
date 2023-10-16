@@ -35,14 +35,24 @@ A really interesting introduction to my blog
 ....
 ```
 
-Upload the file:
+#### Upload the file:
 
 `$ masonictemple4.app blog ~/path-to-blogs/example.md`
 
-Update the blog:  
+#### Update the blog:  
 `$ masonictemple4.app blog update -i 1 ~/path-to-blogs/example.md`
 
 Where the `-i` flag represents the blog id.
+
+#### Make migrations:  
+When you have automigrations to make to the database models.
+`$ masonictemple4.app migrate`
+
+#### Runserver:
+To run the server
+`$ masonictemple4.app runserver` 
+
+You can specify a port with the `-p` flag (default: 8080).
 
 
 ### TODOS:
