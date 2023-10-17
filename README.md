@@ -59,12 +59,14 @@ You can specify a port with the `-p` flag (default: 8080).
 
 ### TODOS:
 - [X] Fix connection to the Cloud SQL instance
-- [ ] CI/CD
+- [X] CI/CD
 - [ ] Refactor 
     - [ ] Make sure to use the utils where necessary instead of full functionality.
     - [ ] Redo the repository. 
     - [ ] Cleanup tests. 
 - [ ] Implement real authentication.
 - [ ] Setup CLI to manage remote data.
+- [ ] Realtime document editing. 
+    - [ ] Look into http3
 
 
