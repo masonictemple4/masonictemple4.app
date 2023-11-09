@@ -66,7 +66,7 @@ You can specify a port with the `-p` flag (default: 8080).
     - [ ] Cleanup tests. 
 - [ ] Implement real authentication.
 - [ ] Setup CLI to manage remote data.
-- [ ] Realtime document editing. 
+- [ ] Realtime document editing.: What if we could simply use a link and connect to the file via neovim, vscode, or the browser and edit it.
     - [ ] Look into http3
 
 
